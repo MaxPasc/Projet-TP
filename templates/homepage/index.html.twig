@@ -2,10 +2,34 @@
 {% set Title="Titre Homepage" %}
 
 {% block title %}{{ Title }} - {{ parent() }}{% endblock %}
+
+
+
+
 {% block body %}
 
+<style>
+    /* body{ */
+        /* src="{{ asset('images/meteor-shower.jpg') }}" */
+/* background-image: url({{ asset('bckgrd_portfolio_birolini_herve.png') }}); */
+/**/
+/* background-repeat: no-repeat; */
+/* background-size: cover; */
+/* background-attachment: fixed; */
+/* background-position: center center ; */
+    /* } */
+</style>
 
 coucou !
 
+<div class="container">
+
+    <img class="TestImg" src="{{ asset('img/bckgrd_portfolio_birolini_herve.png') }}" alt="">
+    <img class="TestImg" src="{{ asset('build/images/bckgrd_portfolio_birolini_herve.png') }}" alt="">
+
+    <div id="TestImg1"></div>
+    <div id="TestImg2"></div>
+
+</div>
 
 {% endblock %}
