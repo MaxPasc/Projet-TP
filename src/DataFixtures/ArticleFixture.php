@@ -133,7 +133,7 @@ class ArticleFixture extends Fixture
                 // $Article['Category'],
                 // $Article['Image'],
             );
-            $obArticle->
+            // $obArticle->
             $obArticle->setTitle($Article['Title']);
             $obArticle->setDescription($Article['Description']);
             $obArticle->setRegion($Article['Region']);

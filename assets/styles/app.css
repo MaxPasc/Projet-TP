@@ -2,30 +2,97 @@ body {
     background-color: lightgray;
 }
 
-.TestImg{
+header{
+    width:100vw;
+    position:fixed;
+    top:0px;
+    z-index: 1;
+}
+#LogoContainer{
+    display:flex;
+    height:50px;
+    background-color: white;
+    /**/
+    align-items:center;
+}
+#ImgLogo{
+    height:45px;
+    width:50px;
+    margin-left:10px;
+}
+/* .navbar{
+    position:fixed;
+    top:50px;
+    z-index: 1;
+} */
+
+
+
+.DivLang{
+    width:80px;
+    height:30px;
+    /**/
+    margin:0.35em;
+    /**/
+    /* background-color:  rgba(255,255,255,0.75); */
+    /* background-color: rgba(0,0,0,0.5); */
+    border:1px solid black;
+    border-radius: 5px;
+    /**/
+    justify-content: space-evenly;
+    align-items: center;
+}
+.DivLang:hover{
+    cursor:pointer;
+}
+.DivLang>p{
+    font-size: 0.65x;;
+    margin-top: 14px;
+    color:white;
+    /* color:black; */
+}
+.DivImgFlag{
+    height:25px;
+    width:25px;
+    margin-top: 5px;
+    /**/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.DivLangFr{
+    box-shadow:inset 2px 2px 6px black;
+    font-size:1.1em;
+    font-weight:bolder;
+}
+.DivLangEn{
+    box-shadow:2px 2px 6px white;
+}
+/* .ImgFlagEn{
+    background-image: url(/assets/img/flag_en.png);
+}
+.ImgFlagFr{
+    background-image: url(/assets/img/flag_fr.png);
+} */
+
+
+
+#BigBody{
+    margin-top:150px;
+}
+
+.TestImg1{
     width:25%;
     height:100px;
     border:2px solid red;
 }
-#TestImg1{
-    width:25%;
-    height:50px;
-    border:2px solid green;
-    /**/
-    background-image: url(/assets/img/bckgrd_portfolio_birolini_herve.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center ;
-}
-#TestImg2{
+.TestImg2{
     width:25%;
     height:100px;
-    border:2px solid blue;
-    /**/
-    /* background-image: url(build/images/bckgrd_portfolio_birolini_herve.png); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center ;
+    border:2px solid yellow;
+}
+#TestImg1{
+    width:25%;
+    height:100px;
+    border:2px solid green;
 }
