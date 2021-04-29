@@ -17,9 +17,10 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/register", name="app_register")
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginFormAuthenticator $authenticator): Response
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginFormAuthenticator $authenticator, \Swift_Mailer $mailer): Response
     {
         $user = new User();
+        $user->setInscriptiondate (new \DateTime());
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
@@ -35,6 +36,20 @@ class RegistrationController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
+            $message = (new \Swift_Message('Hello Email'))
+            ->setFrom('groupe3wf3@outlook.fr')
+            ->setTo($user->getEmail)
+            ->setBody(
+            
+            'coucou'
+        )
+
+        // you can remove the following code if you don't define a text version for your emails
+        
+    ;
+
+    $mailer->send($message);
+
             // do anything else you need here, like send an email
 
             return $guardHandler->authenticateUserAndHandleSuccess(
