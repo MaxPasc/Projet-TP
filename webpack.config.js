@@ -62,7 +62,7 @@ Encore
     // Ajouté par BIROLINI HERVE suite à installation du file-loader...
     .copyFiles({
         from: './assets/images',
-        // to: 'images/' ????
+        to: 'images/[path][name].[ext]',
     })
 
 

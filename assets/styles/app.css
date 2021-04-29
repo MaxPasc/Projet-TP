@@ -75,7 +75,6 @@ header{
     margin-top:150px;
 }
 
-
 .TestImg1{
     width:25%;
     height:100px;
@@ -102,7 +101,7 @@ header{
     height:100px;
     border:2px solid blue;
     /**/
-    background-image: url(../../public/build/images/bckgrd_portfolio_birolini_herve.png);
+    /* background-image: url("../../images/logo.PNG"); */
     background-repeat: no-repeat;
     background-size: cover;
     /* background-attachment: fixed; */

@@ -24,21 +24,20 @@ class MailerController extends AbstractController
     /**
      * @Route("/email")
      */
-    public function sendEmail(MailerInterface $mailer): Response
+    public function sendEmail(\Swift_Mailer $mailer): Response
     {
-        $email = (new Email())
-            ->from('wf3.groupe3@gmail.com')
-            ->to('birolini.herve@gmail.com')
-            //->cc('cc@example.com')
-            //->bcc('bcc@example.com')
-            //->replyTo('fabien@example.com')
-            //->priority(Email::PRIORITY_HIGH)
-            ->subject('Time for Symfony Mailer!')
-            ->text('Sending emails is fun again!')
-            ->html('<p>See Twig integration for better HTML integration!</p>');
+        $message = (new \Swift_Message('Hello Email'))
+        ->setFrom('groupe3wf3@outlook.fr')
+        ->setTo('birolini.herve@gmail.com')
+        ->setBody('Message du courriel')
+        // you can remove the following code if you don't define a text version for your emails
+    ;
 
-        $mailer->send($email);
+    $mailer->send($message);
 
         // ...
+        return $this->render('mailer/index.html.twig', [
+            'controller_name' => 'MailerController',
+        ]);
     }
 }
